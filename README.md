@@ -90,6 +90,9 @@ package requirements: SDL2 SDL2_image SDL2_ttf SDL2-dev SDL2_image-dev SDL2_ttf-
 git clone https://github.com/christianhaitian/351Files.git
 cd 351Files
 
+## For 351MP and 351ELEC
+./build_RG351.sh RG351MP 351ELEC /storage/roms ./res
+
 ## For 351V and 351ELEC
 ./build_RG351.sh RG351V 351ELEC /storage/roms ./res
 

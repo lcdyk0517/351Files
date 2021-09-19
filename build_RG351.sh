@@ -29,6 +29,9 @@ build351Files() {
 # Clean up previous builds
 rm -rf build
 
+# Build for 351MP, 351ELEC
+#build351Files RG351MP 351ELEC /storage/roms ./res
+
 # Build for 351V, 351ELEC
 #build351Files RG351V 351ELEC /storage/roms ./res
 
