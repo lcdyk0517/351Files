@@ -117,6 +117,9 @@ cd 351Files
 ## For CHI and ArkOS
 ./build_RG351.sh CHI ArkOS /roms ./res
 
+## For RGB10Max and ArkOS/RetroOZ/TheRA
+./build_RG351.sh OGS ArkOS /roms ./res
+
 Copy the res folder to your preferred folder location along with the 351Files executable. \
 You can also just grab the generated .tgz file and do as instructed in the installation section above in this readme.
 
@@ -124,6 +127,6 @@ You can also just grab the generated .tgz file and do as instructed in the insta
 Define the following variables when executing 'make':
 * CC
 * SDL2_CONFIG
-* DEVICE: CHI / RG351MP / RG351P / RG351V / RGB10 / RK2020 / PC
+* DEVICE: OGS / CHI / RG351MP / RG351P / RG351V / RGB10 / RK2020 / PC
 * START_PATH
 * RES_PATH
