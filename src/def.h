@@ -275,6 +275,25 @@
    #define BUTTON_HELD_PAGEDOWN           SDL_JoystickGetButton(g_joystick, 5) || SDL_JoystickGetButton(g_joystick, 15)
    #define BUTTON_HELD_SELECT             SDL_JoystickGetButton(g_joystick, 2)
    #define BUTTON_HELD_VALIDATE           SDL_JoystickGetButton(g_joystick, 1)
+#elif defined(DEVICE_OGS)
+   #define BUTTON_PRESSED_UP              event.type == SDL_JOYBUTTONDOWN && event.jbutton.button == 8
+   #define BUTTON_PRESSED_DOWN            event.type == SDL_JOYBUTTONDOWN && event.jbutton.button == 9
+   #define BUTTON_PRESSED_LEFT            event.type == SDL_JOYBUTTONDOWN && event.jbutton.button == 10
+   #define BUTTON_PRESSED_RIGHT           event.type == SDL_JOYBUTTONDOWN && event.jbutton.button == 11
+   #define BUTTON_PRESSED_PAGEUP          event.type == SDL_JOYBUTTONDOWN && (event.jbutton.button == 6 || event.jbutton.button == 4)
+   #define BUTTON_PRESSED_PAGEDOWN        event.type == SDL_JOYBUTTONDOWN && (event.jbutton.button == 7 || event.jbutton.button == 5)
+   #define BUTTON_PRESSED_VALIDATE        event.type == SDL_JOYBUTTONDOWN && event.jbutton.button == 1
+   #define BUTTON_PRESSED_BACK            event.type == SDL_JOYBUTTONDOWN && event.jbutton.button == 0
+   #define BUTTON_PRESSED_MENU_CONTEXT    event.type == SDL_JOYBUTTONDOWN && event.jbutton.button == 3
+   #define BUTTON_PRESSED_SELECT          event.type == SDL_JOYBUTTONDOWN && event.jbutton.button == 2
+   #define BUTTON_HELD_UP                 SDL_JoystickGetButton(g_joystick, 8)
+   #define BUTTON_HELD_DOWN               SDL_JoystickGetButton(g_joystick, 9)
+   #define BUTTON_HELD_LEFT               SDL_JoystickGetButton(g_joystick, 10)
+   #define BUTTON_HELD_RIGHT              SDL_JoystickGetButton(g_joystick, 11)
+   #define BUTTON_HELD_PAGEUP             SDL_JoystickGetButton(g_joystick, 6) || SDL_JoystickGetButton(g_joystick, 4)
+   #define BUTTON_HELD_PAGEDOWN           SDL_JoystickGetButton(g_joystick, 7) || SDL_JoystickGetButton(g_joystick, 5)
+   #define BUTTON_HELD_SELECT             SDL_JoystickGetButton(g_joystick, 2)
+   #define BUTTON_HELD_VALIDATE           SDL_JoystickGetButton(g_joystick, 1)
 #elif defined(DEVICE_RK2020)
    #define BUTTON_PRESSED_UP              event.type == SDL_JOYBUTTONDOWN && event.jbutton.button == 6
    #define BUTTON_PRESSED_DOWN            event.type == SDL_JOYBUTTONDOWN && event.jbutton.button == 7
