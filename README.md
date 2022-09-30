@@ -99,6 +99,9 @@ cd 351Files
 ## For 351P and 351ELEC
 ./build_RG351.sh RG351P 351ELEC /storage/roms ./res
 
+## For 353V and ArkOS
+./build_RG351.sh RG353V ArkOS /roms ./res
+
 ## For 503 and ArkOS
 ./build_RG351.sh RG503 ArkOS /roms ./res
 
