@@ -117,6 +117,9 @@ cd 351Files
 ## For RGB10/OGA 1.1 (BE) and ArkOS
 ./build_RG351.sh RGB10 ArkOS /roms ./res
 
+## For RGB30 and ArkOS
+./build_RG351.sh RGB30 ArkOS /roms ./res
+
 ## For RK2020/OGA 1.0 and ArkOS
 ./build_RG351.sh RK2020 ArkOS /roms ./res
 

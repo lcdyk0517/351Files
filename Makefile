@@ -7,6 +7,7 @@ TARGET = 351Files
 # DEVICE ?= RG351MP
 # DEVICE ?= RG353V
 # DEVICE ?= RGB10
+# DEVICE ?= RGB30
 # DEVICE ?= RK2020
 # DEVICE ?= CHI
 DEVICE ?= PC
@@ -33,3 +34,4 @@ all : $(OBJ)
 
 clean :
 	rm -f $(OBJ) $(TARGET)
+	rm -f $(OBJ) $(TARGET)-sd2
