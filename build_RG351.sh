@@ -15,22 +15,19 @@ build351Files() {
    FIRMWARE="$2"
    START_PATH="$3"
    RES_PATH="$4"
-   if [[ "${PASS}" != "1" ]]; then
-     make clean
-   fi
+   make clean
    make CC=g++ DEVICE="$DEVICE" SDL2_CONFIG=sdl2-config START_PATH="$START_PATH" RES_PATH="$RES_PATH" -j$(nproc)
    strip 351Files
    mkdir -p build/351Files
    cp -r 351Files README.md res build/351Files
-   if [[ -e 351Files-sd2 ]]; then
-     cp -r 351Files-sd2 build/351Files
+   if [[ -e 351Files-sd2.tmp ]]; then
+     cp -r 351Files-sd2.tmp build/351Files/351Files-sd2
    fi
    cp launchers/"$FIRMWARE"/351Files.sh build
    cd build
    tar zcf 351Files-"$VERSION"_"$DEVICE"_"$FIRMWARE".tgz 351Files.sh 351Files
    rm -rf 351Files.sh 351Files 351Files-sd2
    cd ..
-   PASS="1"
 }
 
 # Clean up previous builds
@@ -65,8 +62,9 @@ rm -rf build
 
 if [[ "${1}" == "RGB30" ]] || [[ "${1}" == "RG351V" ]] || [[ "${1}" == "RG351MP" ]] || [[ "${1}" == "RG353V" ]] || [[ "${1}" == "RG503" ]]; then
   build351Files "$1" "$2" "/roms2" "$4"
-  mv -f 351Files 351Files-sd2
+  mv -f 351Files 351Files-sd2.tmp
   build351Files "$1" "$2" "/roms" "$4"
+  mv -f 351Files-sd2.tmp 351Files-sd2
 else
   build351Files "$1" "$2" "$3" "$4"
 fi
