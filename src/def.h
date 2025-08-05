@@ -120,6 +120,7 @@
    #define MARGIN_X                 10
    #define KEYBOARD_MARGIN          8
    #define KEYBOARD_KEY_SPACING     4
+   #define KEYBOARD_SYMBOL_SIZE     24
 
 // Parameters for RG353V
 #elif defined(DEVICE_RG353V)
