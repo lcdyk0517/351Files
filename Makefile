@@ -13,6 +13,7 @@ TARGET = 351Files
 # DEVICE ?= CHI
 # DEVICE ?= XFXH
 # DEVICE ?= R46H
+# DEVICE ?= U8
 DEVICE ?= PC
 
 START_PATH ?= "/"
